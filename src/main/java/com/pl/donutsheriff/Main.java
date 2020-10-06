@@ -9,6 +9,7 @@ import javax.security.auth.login.LoginException;
 public class Main {
 
     public static ShardManager manager;
+    public static final String STATUS = "testing donuts";
 
     public static void main(String[] args) throws LoginException {
         init();
@@ -16,8 +17,8 @@ public class Main {
 
     private static void init() throws LoginException {
         DefaultShardManagerBuilder builder = new DefaultShardManagerBuilder();
-        builder.setToken("NjUzNjc1MzMxMzI4NDA5NjE4.Xj_7Ww.8CWeVl0-SOhgEC9B1ankBPbDmr0");
-        builder.setActivity(Activity.of(Activity.ActivityType.DEFAULT, "reloading"));
+        builder.setToken(Token.token);
+        builder.setActivity(Activity.of(Activity.ActivityType.DEFAULT, STATUS));
 
         builder.addEventListeners(new Muter());
 
