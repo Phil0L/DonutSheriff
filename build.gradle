@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'com.pl'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    // main api
+    compile 'net.dv8tion:JDA:4.2.0_208'
+
+    // junit
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
